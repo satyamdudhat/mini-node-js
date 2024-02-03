@@ -1,0 +1,11 @@
+name: simple-test
+on : push
+jobs:
+    build-node:
+        runs-on: ubuntu-latest
+        steps:
+            - run : node -- version
+            - run : npm --version
+            - uses : actions/checkout@v3
+            - run : npm install
+            - run : node app.js  
