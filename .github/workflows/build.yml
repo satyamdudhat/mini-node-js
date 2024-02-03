@@ -3,6 +3,7 @@ on : push
 jobs:
     build-node:
         runs-on: ubuntu-latest
+        container: node:16
         steps:
             - uses : actions/setup-node@v3
               with:
